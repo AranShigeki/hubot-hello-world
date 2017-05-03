@@ -29,4 +29,4 @@ module.exports = (robot) ->
       "定食"
       "今は時間が悪い"
     ]
-msg.reply = "lunch"
+msg.reply = "#lunch"
