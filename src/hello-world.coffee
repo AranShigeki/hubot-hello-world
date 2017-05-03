@@ -18,7 +18,7 @@ module.exports = (robot) ->
     msg.send '社畜乙です！'
 
   robot.respond /(lunch|御(|お)昼)/i, (msg) ->
-    msg.random [
+    lunch = msg.random [
       "ラーメン"
       "うどんかそば"
       "ポパイ"
@@ -29,3 +29,4 @@ module.exports = (robot) ->
       "定食"
       "今は時間が悪い"
     ]
+msg.reply = "lunch"
