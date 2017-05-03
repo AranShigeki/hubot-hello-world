@@ -17,7 +17,7 @@ module.exports = (robot) ->
   robot.hear /hello/i, (msg) ->
     msg.send '社畜乙です！'
 
-  robot.respond /(lunch|御(|お)昼)/i, (msg) ->
+  robot.hear /(lunch|御(|お)昼)/i, (msg) ->
     msg.send msg.random [
       "ラーメン",
       "うどんかそば",
