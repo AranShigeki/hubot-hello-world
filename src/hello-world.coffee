@@ -12,10 +12,10 @@
 
 module.exports = (robot) ->
   robot.hear /good morning|おはよ/i, (msg) ->
-    msg.send "朝から社畜おつです！"
+    msg.send msg.random ["朝から社畜おつです！", "おはよ", "Good Morning!"]
 
   robot.hear /hello/i, (msg) ->
-    msg.send '社畜乙です！'
+    msg.send msg.random ["社畜乙です！", "World!", "お疲れ様です" ]
 
   robot.hear /(lunch|御(|お)昼(|ひる)/i, (msg) ->
     msg.send msg.random [
