@@ -20,7 +20,12 @@ module.exports = (robot) ->
     msg.send msg.random [ "社畜乙です！",
                          "World!",
                          "お疲れ様です" ]
+  robot.hear /hi|hey|yo/i, (msg) ->
+    msg.send msg.random [ "社畜乙です！",
+                         "heyyyyyyyyyyyyyyyyyyyyyyy",
+                         "ha-1" ]
 
+    
   robot.hear /(lunch|(御|お)(昼|ひる))/i, (msg) ->
     msg.send msg.random [
       "ラーメン",
