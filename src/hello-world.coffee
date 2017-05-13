@@ -22,7 +22,7 @@ module.exports = (robot) ->
                          "World!",
                          "ごきげんよう",
                          "お疲れ様です" ]
-  robot.hear /hi|hey|yo|ha-i/i, (msg) ->
+  robot.hear /\bhi\b|hey|\byo\b|ha-i/i, (msg) ->
     msg.send msg.random [ "社畜乙です！",
                          "heyyyyyyyyyyyyyyyyyyyyyyy",
                          "ごきげんよう",
