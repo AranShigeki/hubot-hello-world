@@ -40,7 +40,7 @@ module.exports = (robot) ->
       "定食",
       "今は時間が悪い"]
 
-  robot.hear /(breakfast|(朝|あさ)(御|はん)(飯|はん))/i, (msg) ->
+  robot.hear /(breakfast|(朝|あさ)(御|ご)(飯|はん))/i, (msg) ->
     msg.send msg.random [
       "ウイダー in ゼリー",
       "ヨーグルト",
@@ -49,6 +49,27 @@ module.exports = (robot) ->
       "食べずにがんばろ？" ,
       "は？",
       "社畜"]
+
+  robot.hear /(dinner|(晩|ばん)(御|ご)(飯|はん))/i, (msg) ->
+    msg.send msg.random [
+      "その前に仕事終わらせて？",
+      "天ぷら",
+      "インドカレー",
+      "早く帰ろう", 
+      "食べずにがんばろ？" ,
+      "は？",
+      "社畜お疲れ様です！"]
+    
+    
+  robot.hear /(bye|(帰|かえ)る|(帰|かえ)ろ)/i, (msg) ->
+    msg.send msg.random [
+      "その前に仕事終わらせて？",
+      "は？",
+      "good bye!",
+      "今日も一日おつかれさまｖ", 
+      "お疲れ様です" ,
+      "は？",
+      "社畜お疲れ様です！"]
     
   robot.hear /ごきげんよう/i, (msg) ->
     msg.send msg.random ["ごきげんよう",
