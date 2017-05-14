@@ -76,4 +76,22 @@ module.exports = (robot) ->
                          "hey!",
                          "は？"]
     
+module.exports = (robot) -&gt;
+  status  = {}
+ 
+  robot.respond /(.*)/i, (res) -&gt;
+    message = res.match[1]
+    return if message is ''
+ 
+    res
+      .http('https://"10252d24-5eb7-425a-bf03-997ebe69f605":"CntDmJA7Qksl"
+      @gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers/90e7acx197-nlc-59885/classify')
+      .headers('Content-Type': 'application/json')
+      .post(JSON.stringify({ text: message})) (err, response, body) -&gt;
+        if err?
+          console.log "Encountered an error #{err}"
+        else
+          data = JSON.parse(body);
+          res.send data["top_class"]
+    
     
