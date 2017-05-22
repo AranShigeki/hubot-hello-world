@@ -61,7 +61,7 @@ module.exports = (robot) ->
       "社畜お疲れ様です！"]
     
     
-  robot.hear /(bye|(帰|かえ)る|(帰|かえ)ろ)/i, (msg) ->
+  robot.hear /(bye|(帰|かえ)る|(帰|かえ)ろ|(帰宅|きたく)|(退社|たいしゃ))/i, (msg) ->
     msg.send msg.random [
       "その前に仕事終わらせて？",
       "は？",
