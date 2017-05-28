@@ -11,7 +11,7 @@
 #   bouzuya <m@bouzuya.net>
 
 module.exports = (robot) ->
-  robot.hear /morning|おはよ/i, (msg) ->
+  robot.hear /morning|おは/i, (msg) ->
     msg.send msg.random [ "朝から社畜おつです！",
                          "おはよ",
                          "ごきげんよう",
